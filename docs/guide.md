@@ -262,7 +262,7 @@ class OrganizationAPIKeyModelAdmin(APIKeyModelAdmin):
 You can also customize any of the default attributes defined in `APIKeyModelAdmin`. For example, to display the organization's name in the list view, and allow searching `OrganizationAPIKey` instances by organization name while keeping the original search behavior, you can write:
 
 ```python
-    list_display = [*APIKeyModelAdmin.list_display, "organization__name"]
+    list_display = [*APIKeyModelAdmin.list_display, "organization"]
     search_fields = [*APIKeyModelAdmin.search_fields, "organization__name"]
 ```
 
